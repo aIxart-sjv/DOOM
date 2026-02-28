@@ -72,6 +72,7 @@ class DoomWindow(mglw.WindowConfig):
         # -------------------------------------------------
         self.program["resolution"].value = self.wnd.size
 
+        self.program["time"] = 0.0
     # -------------------------------------------------
     # RENDER LOOP
     # -------------------------------------------------
@@ -81,5 +82,5 @@ class DoomWindow(mglw.WindowConfig):
 
         # update resolution dynamically
         self.program["resolution"].value = self.wnd.size
-
+        self.program["time"].value = time
         self.vao.render(mgl.TRIANGLE_STRIP)
